@@ -12,7 +12,7 @@ export default function SignIn() {
   const { email, password } = formData;
   const [showPassword, setShowPassword] = useState(false);
   function onChange(e) {
-    setFormData({ [e.target.id]: e.target.value });
+    setFormData(prevState => ({ ...prevState, [e.target.id]: e.target.value }));
   }
   return (
     <section>
